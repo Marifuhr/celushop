@@ -12,7 +12,7 @@ const Products = sequelize.define('Products', {
     allowNull: false,
     validate: {
       notEmpty: true,
-      len: [5, 60]
+      len: [1, 60]
     },
   },
   description: {

@@ -1,9 +1,10 @@
-const { Products, Category } = require('../models');
+const { Products } = require('../Models/ProductsModel.js');
+const { Category } = require('../Models/CategoryModel.js');
 
 async function createProduct(req, res) {
   try {
     const { name, description, image, price, stock, categoryId } = req.body;
-
+   
     // Verificar si el stock es un número válido
     if (isNaN(stock)) {
       return res.status(400).json({ message: 'El stock debe ser un número válido' });

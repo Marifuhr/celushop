@@ -1,6 +1,6 @@
 const { Sequelize } = require('sequelize');
-const { DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT } = require('process.env');
-const { Product, User, Category } = require('./models');
+const { DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT } = process.env;
+
 
 // Configuración de la conexión a la base de datos
 const sequelize = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
@@ -10,21 +10,10 @@ const sequelize = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
   logging: false, // Puedes establecerlo en true para ver los logs de Sequelize en la consola
 });
 
-Product.belongsTo(User);
-User.hasMany(Product);
-Product.belongsTo(Category);
-Category.hasMany(Product);
 
 
-// conexión a la base de datos
-sequelize
-  .authenticate()
-  .then(() => {
-    console.log('Conexión a la base de datos establecida correctamente.');
-  })
-  .catch((error) => {
-    console.error('Error al conectar a la base de datos:', error);
-  });
+
+
 
 module.exports = sequelize;
 // Se importa el módulo Sequelize de la biblioteca Sequelize y los datos de configuración de la base de datos desde process.env. Estos últimos se asumen que están definidos correctamente en tu archivo de entorno (.env o similar).
