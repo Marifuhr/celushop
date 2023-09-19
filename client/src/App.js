@@ -1,13 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Landing from './LandingPage/LandingPage';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import Home from './Home/Home';
+import Detail from './Detail/Detail';
 
-function App() {
+
+export default function App() {
   return (
+    <BrowserRouter>
     <div className="App">
-      <h1>Hola Mundo!!
-      </h1>
+   <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/detail:id" element={<Detail />} />
+    </Routes>
+
     </div>
+    </BrowserRouter>
   );
 }
 
-export default App;
+

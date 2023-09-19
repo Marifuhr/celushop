@@ -5,6 +5,7 @@ const { getProducts } = require('../Controllers/getProducts');
 const { getCategories } = require('../Controllers/getCategories');
 const { createProduct } = require('../Controllers/createProduct');
 const { createRepair } = require('../Controllers/postRepair');
+const { loginUser } = require('../Controllers/loginController');
 
 
 router.get('/users', getUser);
@@ -16,6 +17,9 @@ router.get('/categories', getCategories);
   router.post('/repair', createRepair);
 
   router.post('/admin/products', createProduct);
+
+
+router.post('/login', loginUser);
   
 //  router.post('/admin/login', adminController.login);
 

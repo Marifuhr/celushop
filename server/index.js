@@ -5,7 +5,7 @@ const router = require('./Routes/Routes.js');
 const sequelize  = require('./db.js');
 const {Products, User, Category} = sequelize.models;
 
-
+app.use(express.json());
 
 User.hasMany(Products);
 Products.belongsTo(User);
