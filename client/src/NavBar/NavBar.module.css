@@ -1,12 +1,73 @@
-.navbar{
+/* .navbar{
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 5px;
     background-color: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-    margin: 0;
     margin-bottom: 30px;
-    width: 100%;
     z-index: 1;
 }
+
+.rightSection{
+    display: flex;
+    gap: 10px;
+} */
+/* NavBar.module.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f7f7;
+    padding: 10px;
+    box-shadow: 2px 2px 8px rgba(66, 64, 64, 0.25);
+  }
+  
+  .logo img {
+    width: 150px;
+    height: auto;
+  }
+  
+  .rightSection {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .rightSection button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .rightSection button:hover {
+    opacity: 0.8;
+  }
+  
+  .rightSection .chakra-menu__menu-button {
+    padding: 0;
+  }
+  
+  .rightSection .chakra-menu__menu-button:focus {
+    outline: none;
+  }
+  
+  .rightSection .chakra-menu__menu-list {
+    min-width: 200px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rightSection .chakra-menu__menu-list p {
+    margin: 0;
+  }
+  
+  .rightSection .chakra-menu__menu-item {
+    padding: 8px 0;
+    cursor: pointer;
+  }
+  
+  .rightSection .chakra-menu__menu-item:hover {
+    background-color: #f7f7f7;
+  }

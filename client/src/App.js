@@ -15,7 +15,6 @@ export default function App() {
       <Route path="/home" element={<Home />} />
       <Route path="/detail:id" element={<Detail />} />
     </Routes>
-
     </div>
     </BrowserRouter>
   );
