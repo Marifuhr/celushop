@@ -15,6 +15,6 @@ const Category = sequelize.define('Category',{
                 this.setDataValue('name',value ? value.trim().toLowerCase() : null);
             },
         }
-    },{timestamps:false});
+    },{ tableName: 'Category' });
 
-module.exports = Category;
+module.exports = {Category};

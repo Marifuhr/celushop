@@ -49,6 +49,10 @@ export default function NavBar() {
       <div className={style.logo}>
         <img src={logo} alt="logo" />
       </div>
+      <div>
+  <h1 style={{ fontSize: '48px', color: 'red', animation: 'bounce 1s infinite' }}>Celushop</h1>
+  <h2 style={{ fontSize: '24px', color: 'blue', animation: 'fade-in 2s' }}>¡Bienvenido a nuestra app de accesorios y reparación de celulares!</h2>
+</div>
       <div className={style.rightSection}>
         <Box>
           <Button onClick={handleToggleColorMode} rounded={'full'} variant={'link'} cursor={'pointer'} minW={0}>

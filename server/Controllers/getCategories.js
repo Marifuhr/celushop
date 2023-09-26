@@ -1,4 +1,4 @@
-const { Category } = require('../Models/CategoryModel.js');
+const { Category } = require('../Models/CategoryModel');
 
 
 async function getCategories(req, res) {

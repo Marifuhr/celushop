@@ -6,6 +6,7 @@ const { getCategories } = require('../Controllers/getCategories');
 const { createProduct } = require('../Controllers/createProduct');
 const { createRepair } = require('../Controllers/postRepair');
 const { loginUser } = require('../Controllers/loginController');
+const { createCategory } = require('../Controllers/createCategory');
 
 
 router.get('/users', getUser);
@@ -17,6 +18,8 @@ router.get('/categories', getCategories);
   router.post('/repair', createRepair);
 
   router.post('/admin/products', createProduct);
+
+  router.post('/categories', createCategory);
 
 
 router.post('/login', loginUser);

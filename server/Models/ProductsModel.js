@@ -1,5 +1,6 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../db.js');
+const { Category } = require('../Models/CategoryModel.js');
 
 const Products = sequelize.define('Products', {
   id: {
@@ -42,10 +43,15 @@ const Products = sequelize.define('Products', {
       min: 0
     }
   },
-  category: {
-    type: DataTypes.STRING(60),
-    allowNull: false,
-  }
+  categoryId: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: Category,
+      key: 'id',
+    },
+  },
 });
 
-module.exports = Products;
+ Products.belongsTo(Category, { foreignKey: 'categoryId' });
+
+module.exports = { Products };

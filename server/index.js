@@ -10,7 +10,7 @@ app.use(express.json());
 User.hasMany(Products);
 Products.belongsTo(User);
 Category.hasMany(Products);
-Products.belongsTo(Category);
+Products.belongsTo(Category, { foreignKey: 'categoryId' });
 
 app.use(router);
 
