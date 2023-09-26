@@ -3,14 +3,14 @@ const express = require('express');
 const app = express();
 const router = require('./Routes/Routes.js');
 const sequelize  = require('./db.js');
-const {Products, User, Category} = sequelize.models;
+const {products, user, category} = sequelize.models;
 
 app.use(express.json());
 
-User.hasMany(Products);
-Products.belongsTo(User);
-Category.hasMany(Products);
-Products.belongsTo(Category, { foreignKey: 'categoryId' });
+// user.hasMany(products);
+// products.belongsTo(user);
+category.hasMany(products);
+products.belongsTo(category, { foreignKey: 'categoryId' });
 
 app.use(router);
 

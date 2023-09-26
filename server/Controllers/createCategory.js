@@ -1,4 +1,4 @@
-const { Category } = require('../Models/CategoryModel.js');
+const { category } = require('../Models/CategoryModel.js');
 
 async function createCategory(req, res) {
   try {
@@ -6,10 +6,10 @@ async function createCategory(req, res) {
     const { name } = req.body;
 
     // Crea la categoría en la base de datos
-    const category = await Category.create({ name });
+    const categorie = await category.create({ name });
 
     // Devuelve la categoría creada como respuesta
-    return res.json(category);
+    return res.json(categorie);
   } catch (error) {
     console.error(error);
     return res.status(500).json({ message: 'Error al crear la categoría' });

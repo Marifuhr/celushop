@@ -1,12 +1,12 @@
-const { User } = require('../Models/UserModel.js');
+const { user } = require('../Models/UserModel.js');
 
 async function loginUser(req, res) {
   try {
     const { username, password } = req.body;
 
     // Verificar si el usuario y la contraseña son válidos
-    const user = await User.findOne({ where: { username } });
-    if (!user || user.password !== password) {
+    const usuario = await user.findOne({ where: { username } });
+    if (!usuario || usuario.password !== password) {
       return res.status(401).json({ message: 'Credenciales inválidas' });
     }
 

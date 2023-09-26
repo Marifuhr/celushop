@@ -1,8 +1,8 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../db.js');
-const { Category } = require('../Models/CategoryModel.js');
+const { category } = require('../Models/CategoryModel.js');
 
-const Products = sequelize.define('Products', {
+const products = sequelize.define('products', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -46,12 +46,12 @@ const Products = sequelize.define('Products', {
   categoryId: {
     type: DataTypes.INTEGER,
     references: {
-      model: Category,
+      model: category,
       key: 'id',
     },
   },
 });
 
- Products.belongsTo(Category, { foreignKey: 'categoryId' });
+ products.belongsTo(category, { foreignKey: 'categoryId' });
 
-module.exports = { Products };
+module.exports = { products };

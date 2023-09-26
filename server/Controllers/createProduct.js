@@ -1,5 +1,5 @@
-const { Products } = require('../Models/ProductsModel.js');
-const { Category } = require('../Models/CategoryModel.js');
+const { products } = require('../Models/ProductsModel.js');
+const { category } = require('../Models/CategoryModel.js');
 
 async function createProduct(req, res) {
   try {
@@ -10,12 +10,12 @@ async function createProduct(req, res) {
       return res.status(400).json({ message: 'El stock debe ser un número válido' });
     }
 
-    const category = await Category.findByPk(categoryId);
-    if (!category) {
+    const categorie = await category.findByPk(categoryId);
+    if (!categorie) {
       return res.status(404).json({ message: 'Categoría no encontrada' });
     }
     // Crear el producto en la base de datos
-    const product = await Products.create({
+    const product = await products.create({
       name,
       description,
       image,

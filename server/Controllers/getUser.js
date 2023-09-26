@@ -1,21 +1,21 @@
-const { User } = require('../Models/UserModel');
+const { user } = require('../Models/UserModel');
 
 async function getUser(req, res) {
   try {
     const { id } = req.params;
 
     // Buscar el usuario por su ID en la base de datos
-    const user = await User.findOne({
+    const usuario = await user.findOne({
       where: { id },
     });
 
     // Verificar si el usuario existe
-    if (!user) {
+    if (!usuario) {
       return res.status(404).json({ message: 'Usuario no encontrado' });
     }
 
     // Retornar el usuario encontrado
-    return res.json(user);
+    return res.json(usuario);
   } catch (error) {
     // Manejo de errores
     console.error(error);
