@@ -21,8 +21,9 @@ router.get('/categories', getCategories);
 
   router.post('/categories', createCategory);
 
-
 router.post('/login', loginUser);
+
+
   
 //  router.post('/admin/login', adminController.login);
 

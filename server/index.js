@@ -14,7 +14,7 @@ products.belongsTo(category, { foreignKey: 'categoryId' });
 
 app.use(router);
 
-app.listen(3000, () => {
+app.listen(3001, () => {
   // conexión a la base de datos
 sequelize
 .authenticate()
@@ -25,5 +25,5 @@ sequelize
 .catch((error) => {
   console.error('Error al conectar a la base de datos:', error);
 });
-  console.log('Server running on port 3000');
+  console.log('Server running on port 3001');
 });
