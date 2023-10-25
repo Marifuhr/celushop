@@ -2,7 +2,7 @@
 import React from 'react';
 import { Box, Button, Menu, MenuButton, MenuList, MenuItem, MenuDivider, useColorMode, Center } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
-import logo from '../images/logo_2cs.png';
+import logo from '../images/logo_celu.jpg';
 import style from '../NavBar/NavBar.module.css';
 import Profile from '../Login/Profile';
 import { useAuth0 } from '@auth0/auth0-react';
@@ -28,10 +28,7 @@ export default function NavBar() {
       <div className={style.logo}>
         <img src={logo} alt="logo" />
       </div>
-      <div>
-  <h1 style={{ fontSize: '48px', color: 'black', animation: 'bounce 1s infinite', boxShadow: '2px 0 5px white' }}>Celushop</h1>
-  <h2 style={{ fontSize: '24px', color: 'black', animation: 'fade-in 2s' }}>¡Bienvenido a nuestra app de accesorios y reparación de celulares!</h2>
-</div>
+      
       <div className={style.rightSection}>
         <Box>
           <Button onClick={handleToggleColorMode} rounded={'full'} variant={'link'} cursor={'pointer'} minW={0}>

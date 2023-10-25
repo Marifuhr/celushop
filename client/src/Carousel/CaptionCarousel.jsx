@@ -37,22 +37,22 @@ export default function CaptionCarousel() {
 
   const cards = [
     {
-      title: 'Design Projects 1',
-      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
-     image: 'https://images.unsplash.com/photo-1507237998874-b4d52d1dd655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+      title: 'Servicio Técnico Especializado',
+      text: "Brindamos soluciones profesionales, garantizando una atención de calidad y la restauración óptima de tu celular",
+     image: 'https://recambiostablet.com/blog/wp-content/uploads/2019/08/cuanto-cuesta-cambiar-la-pantalla-del-movil.jpg',
         
     },
     {
-      title: 'Design Projects 2',
-      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      title: 'Venta de Accesorios',
+      text: " Encuentra una amplia variedad de accesorios de calidad para tu celular. Desde fundas y protectores hasta cargadores y auriculares, tenemos todo lo que necesitas para complementar y proteger tu dispositivo.",
       image:
-        'https://images.unsplash.com/photo-1438183972690-6d4658e3290e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2274&q=80',
+        'https://www.blog.doto.com.mx/wp-content/uploads/2023/03/accesorios-para-celular.jpg',
     },
     {
-      title: 'Design Projects 3',
-      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      title: 'Solicitá tu Presupuesto',
+      text: "Obtén un presupuesto detallado y sin costo. Nuestro equipo especializado evaluará el daño y te brindará la información necesaria para que tomes la mejor decisión.",
       image:
-        'https://images.unsplash.com/photo-1507237998874-b4d52d1dd655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+        'https://www.cenedi.com/assets/Reparacio%CC%81n-de-Tele%CC%81fonos-Celulares.jpg',
     },
   ]
 
@@ -114,15 +114,15 @@ export default function CaptionCarousel() {
           top="50%"
           transform="translate(0, -50%)"
         >
-          <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+          <Heading fontSize={{ base: '2xl', md: '3xl', lg: '5xl' }} color="black" marginLeft="-40rem" marginTop="26rem" fontFamily ="Fredericka the Great" serif backgroundColor="rgba(255, 255, 255, 0.5)">
             {card.title}
           </Heading>
-          <img
+          {/* <img
             src={card.image}
             alt={card.title}
             style={{ maxWidth: '100%', height: 'auto' }} // Estilos para ajustar el tamaño
-          />
-          <Text fontSize={{ base: 'md', lg: 'lg' }} color="GrayText">
+          /> */}
+          <Text fontSize={{ base: 'md', lg: 'lg' }} color="black" marginRight="-18rem">
             {card.text}
           </Text>
         </Stack>
