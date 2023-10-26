@@ -30,6 +30,8 @@ export default function NavBar() {
       </div>
       
       <div className={style.rightSection}>
+      <h1 style={{ marginRight: '30rem'}}>El mejor sitio para mimar tu celu</h1>
+        
         <Box>
           <Button onClick={handleToggleColorMode} rounded={'full'} variant={'link'} cursor={'pointer'} minW={0}>
             {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
