@@ -28,17 +28,19 @@ const SocialButton = ({
       cursor={'pointer'}
       as={'a'}
       href={href}
+      target="_blank" // Agrega este atributo
       display={'inline-flex'}
       alignItems={'center'}
       justifyContent={'center'}
       transition={'background 0.3s ease'}
       _hover={{
         bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
-      }}>
+      }}
+    >
       <VisuallyHidden>{label}</VisuallyHidden>
       {children}
     </chakra.button>
-  )
+  );
 }
 
 export default function Footer() {
@@ -63,7 +65,7 @@ export default function Footer() {
           <SocialButton label={'YouTube'} href={'#'} target="_blank" rel="noopener noreferrer">
             <FaYoutube />
           </SocialButton>
-          <SocialButton label={'Instagram'} href={'https://www.instagram.com/'} target={'_blank'} rel="noopener noreferrer">
+          <SocialButton label={'Instagram'} href={'https://www.instagram.com/celushop_okk/'} target="_blank" rel="noopener noreferrer">
             <FaInstagram />
           </SocialButton>
         </Stack>

@@ -6,6 +6,8 @@ import logo from '../images/logo_celu.jpg';
 import style from '../NavBar/NavBar.module.css';
 import Profile from '../Login/Profile';
 import { useAuth0 } from '@auth0/auth0-react';
+import { Link } from 'react-router-dom';
+
 
 export default function NavBar() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -30,15 +32,57 @@ export default function NavBar() {
       </div>
       
       <div className={style.rightSection}>
-      <h1 style={{ marginRight: '30rem'}}>El mejor sitio para mimar tu celu</h1>
+      <h1 style={{ marginRight: '10rem', fontFamily: 'Libre Baskerville'}}>CeluShop</h1>
         
-        <Box>
-          <Button onClick={handleToggleColorMode} rounded={'full'} variant={'link'} cursor={'pointer'} minW={0}>
-            {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-          </Button>
-        </Box>
-        {isAuthenticated ? (
+        <div className={style.centerSection}>
           <Menu>
+            <MenuButton
+              as={Link}
+              to="/detail:id"
+              rounded={'full'}
+              variant={'link'}
+              cursor={'pointer'}
+              minW={0}
+              _hover={{ bg: 'transparent' }}
+              _expanded={{ bg: 'transparent' }}
+              _focus={{ boxShadow: 'none' }}
+              bg={colorMode === 'light' ? 'white' : '#1A202C'}
+             
+            >
+                  Accesorios
+          </MenuButton>
+          {/* <MenuList bg={colorMode === 'light' ? 'white' : '#1A202C'}>
+            <MenuItem>Accesorio 1</MenuItem>
+            <MenuItem>Accesorio 2</MenuItem>
+            <MenuItem>Accesorio 3</MenuItem>
+          </MenuList> */}
+        </Menu>
+        </div>
+        <div className={style.centerSection}>
+        <Menu>
+          <MenuButton
+            as={Link}
+            to="/form"
+            rounded={'full'}
+            variant={'link'}
+            cursor={'pointer'}
+            minW={0}
+            _hover={{ bg: 'transparent' }}
+            _expanded={{ bg: 'transparent' }}
+            _focus={{ boxShadow: 'none' }}
+            bg={colorMode === 'light' ? 'white' : '#1A202C'}
+          >
+            Pedí tu presupuesto
+          </MenuButton>
+          {/* <MenuList bg={colorMode === 'light' ? 'white' : '#1A202C'}>
+            <MenuItem>Presupuesto 1</MenuItem>
+            <MenuItem>Presupuesto 2</MenuItem>
+            <MenuItem>Presupuesto 3</MenuItem>
+          </MenuList> */}
+        </Menu>
+        </div>
+        {isAuthenticated ? (
+            <Menu>
             <MenuButton
               as={Button}
               rounded={'full'}
@@ -78,6 +122,11 @@ export default function NavBar() {
             Login
           </Button>
         )}
+          <Box style={{marginTop: '5px'}}>
+            <Button onClick={handleToggleColorMode} rounded={'full'} variant={'link'} cursor={'pointer'} minW={0}>
+              {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+            </Button>
+          </Box>
       </div>
     </div>
   );
