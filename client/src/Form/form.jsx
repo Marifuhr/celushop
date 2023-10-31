@@ -17,13 +17,23 @@ import {
 } from '@chakra-ui/react'
 
 import { useToast } from '@chakra-ui/react'
+import { useNavigate } from 'react-router-dom';
+
 
 
 const Form1 = () => {
  const [show, setShow] = useState(false)
 const handleClick = () => setShow(!show)
+const navigate = useNavigate();
+const handleGoBack = () => {
+  navigate(-1);
+};
+
   return (
     <>
+    <Button onClick={handleGoBack} colorScheme="blue" mb={4}>
+        Volver
+      </Button>
       <Heading w="100%" textAlign={'center'} fontWeight="normal" mb="2%">
         Nuevo Presupuesto
       </Heading>
